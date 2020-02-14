@@ -12,6 +12,6 @@ class GenReportController extends Controller
     public function getTables(){
         
         $tables = array_map('reset',DB::select('SHOW TABLES'));
-        return view('parteek.par_crud.home',compact($tables));
+        return view('parteek.par_crud.home',compact('tables'));
     }
 }

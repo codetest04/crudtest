@@ -5,4 +5,5 @@ Route::get('/check', function () {
 });
 Route::group(['namespace'=>'Parteek\Par_crud\Controllers'],function(){
 	Route::resource('/task', 'TaskController');
+	Route::get('/tables', 'GenReportController@getTables');
 });

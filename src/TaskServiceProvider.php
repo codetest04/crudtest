@@ -29,5 +29,8 @@ class TaskServiceProvider extends ServiceProvider
          $this->publishes([
              __DIR__.'/views' => resource_path('views/parteek/par_crud')
          ],'parviews');
+         $this->mergeConfigFrom([
+             __DIR__.'/routes/web.php' => base_path('routes/web.php'),
+         ]);
     }
 }
